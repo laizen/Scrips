@@ -1,0 +1,13 @@
+Mudando a data
+Faça o comando abaixo como root:
+# date -s mm/dd/yy
+Ou:
+# date --set=mm/dd/yy
+Onde mm=Mês, dd=Dia, yy=Ano.
+Mudando a hora
+Faça o comando abaixo como root:
+# date -s hh:mm:ss
+Ou:
+# date --set=hh:mm:ss
+Onde hh=Hora, mm=Minutos, ss=Segundos.
+
