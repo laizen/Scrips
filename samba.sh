@@ -3,29 +3,29 @@ echo "PADRAO PI TESTE"
 #Autor: Pedro Matias
 #DATA: 13/02/2014
 
-RED=   '\033[0;31m'
-GREEN= '\033[0;32m'
-BLUE=  '\033[0;34m'
-GRAY=  '\033[0;37m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+GRAY='\033[0;37m'
 YELLOW='\033[1;33m'
-WHITE= '\033[1;37m'
-NC=    '\033[0m' # No Color
+WHITE='\033[1;37m'
+NC='\033[0m' # No Color
 
 echo "Scrip para configuracao inicial do sistema." "`sleep 0.3`"
 echo "Carregando informacoes ""`sleep 0.5`"
 # echo -e ${RED}"[ OK ]"${NC}"`sleep 0.3`"
 echo -e ${GREEN}"Update do Sistema"${NC}"`sleep 0.3`"
-apt-get update
+apt-get -q -y update
 echo -e ${GREEN}"Upgrade do Sistema"${NC}"`sleep 0.3`"
-apt-get upgrade
+apt-get -q -y upgrade
 echo -e ${GREEN}"Instalando Splitvt"${NC}"`sleep 0.3`"
-apt-get install splitvt
+apt-get -q -y install splitvt
 echo -e ${GREEN}"Instalando Htop"${NC}"`sleep 0.3`"
-apt-get install htop
+apt-get -q -y install htop
 echo -e ${GREEN}"Instalando Manager NTFS"${NC}"`sleep 0.3`"
-apt-get install ntfs-3g
+apt-get -q -y install ntfs-3g
 echo -e ${GREEN}"Instalando SAMBA"${NC}"`sleep 0.3`"
-apt-get install samba
+apt-get -q -y install samba
 cd /
 echo -e ${RED}"Criando Configuração do SAMBA"${NC}"`sleep 0.3`"
 cp /etc/samba/smb.conf /home/
