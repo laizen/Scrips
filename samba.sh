@@ -50,26 +50,26 @@ echo '		idmap config * : backend = tdb'
 echo ''
 echo '[Disk1]'
 echo '		path = /media/usb0'
-echo '		valid users = pedro'
+echo '		valid users = samba'
 echo '		read only = No'
 echo '		create mask = 0775'
 echo '		directory mask = 0775'
 echo '[Disk2]'
 echo '		path = /media/usb1'
-echo '		valid users = pedro'
+echo '		valid users = samba'
 echo '		read only = No'
 echo '		create mask = 0775'
 echo '		directory mask = 0775'
 echo '[Disk3]'
 echo '		path = /media/usb2'
-echo '		valid users = pedro'
+echo '		valid users = samba'
 echo '		read only = No'
 echo '		create mask = 0775'
 echo '		directory mask = 0775'
 } >/etc/samba/smb.conf
 echo -e ${RED}"Criando Usuário para o SAMBA"${NC}"`sleep 0.5`"
-nome= "samba"
+nome="samba"
 senha="123456"
-useradd -M -D $nome -p $senha
+useradd -M $nome -p $senha
 (echo "$senha"; echo "$senha") | smbpasswd -s -a $nome
-echo ${BLUE}"FIM"${NC}
+echo -e ${BLUE}"FIM"${NC}
